@@ -93,6 +93,7 @@ app.get("/register", function(req, res){
 });
 
 app.get("/secrets", function(req, res){
+  //search not equal to null
   User.find({"secret": {$ne: null}}, function(err, foundUsers){
     if (err){
       console.log(err);
